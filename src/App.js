@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
-import TodoList from './TodoList';
+// App.js
 
-function App() {
+import React from 'react';
+import TodoList from './TodoList'; 
+import './App.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Redux To-Do List</h1>
-      <TodoList/>
+    <div className="app-container">
+      <h1>Redux Todo-List</h1>
+      <TodoList /> 
     </div>
   );
-}
+};
 
 export default App;
