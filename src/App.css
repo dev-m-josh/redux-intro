@@ -2,3 +2,54 @@
     text-decoration: line-through;
     color: gray;
   }
+  
+.app-container{
+    padding: 20px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list-container{
+    width: 100%;
+    align-self: flex-start;
+}
+
+.todo-form{
+    width: 100%;
+    background-color: rgb(218, 214, 214);
+    height: 35px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.todo-form input{
+    background-color: transparent;
+    border-radius: 25px;
+    width: 75%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+    height: 100%;
+}
+
+.todo-form button{
+    background-color: orangered;
+    width: 25%;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+    height: 100%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
