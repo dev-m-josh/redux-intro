@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import TodoList from './TodoList';
 
 function App() {
   return (
     <div className="App">
-      <h1>Redux TodoList</h1>
+      <h1>Redux To-Do List</h1>
+      <TodoList/>
     </div>
   );
 }
