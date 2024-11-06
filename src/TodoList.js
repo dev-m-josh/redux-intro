@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, toggleTodo, deleteTodo } from './reducers/todoSlice';
 
@@ -14,6 +14,7 @@ const TodoList = () => {
     }
   };
 
+  const checkButton = useRef();
   const handleToggleTodo = (id) => {
     dispatch(toggleTodo(id));
   };
@@ -28,14 +29,14 @@ const TodoList = () => {
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add a new task"
+        placeholder="Add a new task..."
       />
       <button onClick={handleAddTodo}>Add Todo</button>
 
       <div>
         {todos.map((todo) => (
           <div key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-            <input type='checkbox'  onClick={() => handleToggleTodo(todo.id)}/>
+            <input type='checkbox' ref={checkButton}  onClick={() => handleToggleTodo(todo.id)} checked ={todo.completed}/>
             <p>{todo.text}</p>
             <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </div>
